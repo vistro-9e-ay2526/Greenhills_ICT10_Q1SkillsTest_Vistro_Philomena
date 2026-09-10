@@ -3,7 +3,7 @@ from pyscript import document, display
 
 
 def calculate_receipt(e):
-    document.getElementById('output').innerHTML = " " 
+    document.getElementById('output').innerHTML = " "   #clears previous outputs
 
     prod1 = document.getElementById("item1")
     prod2 = document.getElementById("item2")
@@ -14,6 +14,7 @@ def calculate_receipt(e):
     prod7 = document.getElementById("item7")
     prod8 = document.getElementById("item8")
 
+    #retrieves value of checked boxes
     price1 = float(prod1.value) * prod1.checked
 
     price2 = float(prod2.value) * prod2.checked
@@ -33,7 +34,7 @@ def calculate_receipt(e):
 
     subtotal = float(price1)+(price2)+(price3)+(price4)+(price5)+(price6)+(price7)+(price8)
     vat = 0.12 * subtotal
-    rounded_vat = round(vat, 2)
+    rounded_vat = round(vat, 2)   #rounds off vat to 2 decimal places
     total = subtotal + vat
 
     display(f'Subtotal: {subtotal}', target="output") 
