@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.11.1/core.js"></script>
+    <title>Receipt Generator</title>
+</head>
+<body>
+    <form>
+        <h1>Plant Shop</h1>
+        <br>
+        <h2>Flowers:</h2>
+        <br>
+        <input type="checkbox" id="item1" value="100">
+        <label id="item1-label">Begonia  . . .  (₱100)</label>
+        <br>
+        <input type="checkbox" id="item2" value="250">
+        <label id="item2-label">Carnation  . . .  (₱250)</label>
+        <br>
+        <input type="checkbox" id="item3" value="80">
+        <label id="item3-label">Foxglove Seed  . . .  (₱80)</label>
+        <br>
+        <input type="checkbox" id="item4" value="200">
+        <label id="item4-label">Fuchsia  . . .  (₱200)</label>
+        <br>
+        <input type="checkbox" id="item5" value="640">
+        <label id="item5-label">Hydrangea  . . .  (₱640)</label>
+        <br>
+        <input type="checkbox" id="item6" value="300">
+        <label id="item6-label">Lily  . . .  (₱300)</label>
+        <br>
+        <input type="checkbox" id="item7" value="420">
+        <label id="item7-label">Orchid  . . .  (₱420)</label>
+        <br>
+        <input type="checkbox" id="item8" value="250">
+        <label id="item8-label">Tulip  . . .  (₱250)</label>
+        <br>
+        <br>
+        <button type="button" py-click="calculate_receipt">Checkout</button>
+        <button type="reset">Reset</button>
+        <br>
+        <br>
+        <div>
+            <h3>===Receipt===</h3>
+            <div id="output"></div>
+        </div>
+    </form>
+    <br>
+    <br>
+    
+    <script type="py" src="main.py"></script>
+</body>
+</html>
